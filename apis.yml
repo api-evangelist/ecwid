@@ -1,0 +1,72 @@
+aid: ecwid
+name: Ecwid by Lightspeed
+description: >-
+  Ecwid by Lightspeed is a multi-channel e-commerce platform that lets
+  merchants launch a storefront and sell across websites, social media
+  (Instagram, TikTok, Facebook, Pinterest, Snapchat), online marketplaces,
+  and in-person via point-of-sale. The platform handles centralized inventory
+  and order management, automated marketing, payments, shipping, tax, and
+  domain management. The Ecwid REST API exposes products, categories, orders,
+  customers, payment and shipping methods, and storefront settings using
+  OAuth 2.0 authentication with public (read-only) or private access tokens.
+type: Index
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+  - E-Commerce
+  - Online Store
+  - Storefront
+  - Retail
+  - Point of Sale
+  - Multi-Channel Commerce
+url: >-
+  https://raw.githubusercontent.com/api-evangelist/ecwid/refs/heads/main/apis.yml
+created: '2026-05-11'
+modified: '2026-05-11'
+specificationVersion: '0.19'
+apis:
+  - aid: ecwid:rest-api
+    name: Ecwid REST API
+    description: >-
+      JSON REST API for managing Ecwid store data including products,
+      categories, orders, customers, discount coupons, payment and shipping
+      methods, application data, and storefront settings. Requests are made
+      over HTTPS, authenticated via OAuth 2.0 access tokens (private for
+      write access, public for read-only).
+    humanURL: https://api-docs.ecwid.com/reference/overview
+    baseURL: https://app.ecwid.com/api/v3
+    tags:
+      - E-Commerce
+      - Online Store
+      - Storefront
+      - Products
+      - Orders
+    properties:
+      - type: Documentation
+        url: https://api-docs.ecwid.com/reference/overview
+      - type: Developer Portal
+        url: https://developers.ecwid.com
+      - type: GitHub Docs
+        url: https://github.com/Ecwid/ecwid-api-docs
+      - type: OAuth Token Endpoint
+        url: https://my.ecwid.com/api/oauth/token
+      - type: Getting Started
+        url: https://docs.ecwid.com/get-started/make-your-first-api-request
+
+common:
+  - type: Website
+    url: https://www.ecwid.com
+  - type: Documentation
+    url: https://docs.ecwid.com
+  - type: API Documentation
+    url: https://api-docs.ecwid.com/reference/overview
+  - type: Pricing
+    url: https://www.ecwid.com/pricing
+  - type: Sign Up
+    url: https://my.ecwid.com/cp/?source=signup
+  - type: Status
+    url: https://status.ecwid.com
+  - type: GitHub Organization
+    url: https://github.com/Ecwid
+maintainers:
+  - FN: Kin Lane
+    email: kin@apievangelist.com
