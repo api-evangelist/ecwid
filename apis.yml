@@ -49,7 +49,7 @@ apis:
         url: https://github.com/Ecwid/ecwid-api-docs
       - type: OAuth Token Endpoint
         url: https://my.ecwid.com/api/oauth/token
-      - type: Getting Started
+      - type: GettingStarted
         url: https://docs.ecwid.com/get-started/make-your-first-api-request
 
 common:
@@ -61,11 +61,11 @@ common:
     url: https://api-docs.ecwid.com/reference/overview
   - type: Pricing
     url: https://www.ecwid.com/pricing
-  - type: Sign Up
+  - type: SignUp
     url: https://my.ecwid.com/cp/?source=signup
-  - type: Status
+  - type: StatusPage
     url: https://status.ecwid.com
-  - type: GitHub Organization
+  - type: GitHubOrganization
     url: https://github.com/Ecwid
 maintainers:
   - FN: Kin Lane
