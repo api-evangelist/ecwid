@@ -53,6 +53,8 @@ apis:
         url: https://docs.ecwid.com/get-started/make-your-first-api-request
 
 common:
+  - type: LinkedIn
+    url: https://www.linkedin.com/company/ecwid
   - type: Website
     url: https://www.ecwid.com
   - type: Documentation
