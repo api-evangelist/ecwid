@@ -69,6 +69,8 @@ common:
     url: https://status.ecwid.com
   - type: GitHubOrganization
     url: https://github.com/Ecwid
+  - type: LLMsTxt
+    url: https://docs.ecwid.com/llms.txt
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
