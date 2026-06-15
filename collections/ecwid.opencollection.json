@@ -1,0 +1,474 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Ecwid REST API",
+    "version": "3.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Get store profile",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/profile"
+      },
+      "docs": "Get store profile"
+    },
+    {
+      "info": {
+        "name": "Update store profile",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/profile",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update store profile"
+    },
+    {
+      "info": {
+        "name": "Search products",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/products",
+        "params": [
+          {
+            "name": "keyword",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "limit",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "offset",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "category",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "enabled",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Search products"
+    },
+    {
+      "info": {
+        "name": "Add a product",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/products",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Add a product"
+    },
+    {
+      "info": {
+        "name": "Get a product",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/products/:productId",
+        "params": [
+          {
+            "name": "productId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get a product"
+    },
+    {
+      "info": {
+        "name": "Update a product",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/products/:productId",
+        "params": [
+          {
+            "name": "productId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update a product"
+    },
+    {
+      "info": {
+        "name": "Delete a product",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/products/:productId",
+        "params": [
+          {
+            "name": "productId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete a product"
+    },
+    {
+      "info": {
+        "name": "Search categories",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/categories",
+        "params": [
+          {
+            "name": "parent",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "limit",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "offset",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Search categories"
+    },
+    {
+      "info": {
+        "name": "Create a category",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/categories",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create a category"
+    },
+    {
+      "info": {
+        "name": "Get a category",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/categories/:categoryId",
+        "params": [
+          {
+            "name": "categoryId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get a category"
+    },
+    {
+      "info": {
+        "name": "Update a category",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/categories/:categoryId",
+        "params": [
+          {
+            "name": "categoryId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update a category"
+    },
+    {
+      "info": {
+        "name": "Delete a category",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/categories/:categoryId",
+        "params": [
+          {
+            "name": "categoryId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete a category"
+    },
+    {
+      "info": {
+        "name": "Search orders",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/orders",
+        "params": [
+          {
+            "name": "keywords",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "limit",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "offset",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "paymentStatus",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "fulfillmentStatus",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Search orders"
+    },
+    {
+      "info": {
+        "name": "Create an order",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/orders",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create an order"
+    },
+    {
+      "info": {
+        "name": "Get an order",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/orders/:orderNumber",
+        "params": [
+          {
+            "name": "orderNumber",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get an order"
+    },
+    {
+      "info": {
+        "name": "Update an order",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/orders/:orderNumber",
+        "params": [
+          {
+            "name": "orderNumber",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update an order"
+    },
+    {
+      "info": {
+        "name": "Delete an order",
+        "type": "http"
+      },
+      "http": {
+        "method": "DELETE",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/orders/:orderNumber",
+        "params": [
+          {
+            "name": "orderNumber",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Delete an order"
+    },
+    {
+      "info": {
+        "name": "Search customers",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/customers",
+        "params": [
+          {
+            "name": "keyword",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "limit",
+            "value": "",
+            "type": "query"
+          },
+          {
+            "name": "offset",
+            "value": "",
+            "type": "query"
+          }
+        ]
+      },
+      "docs": "Search customers"
+    },
+    {
+      "info": {
+        "name": "Create a customer",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/customers",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create a customer"
+    },
+    {
+      "info": {
+        "name": "Get a customer",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/customers/:customerId",
+        "params": [
+          {
+            "name": "customerId",
+            "value": "",
+            "type": "path"
+          }
+        ]
+      },
+      "docs": "Get a customer"
+    },
+    {
+      "info": {
+        "name": "Update a customer",
+        "type": "http"
+      },
+      "http": {
+        "method": "PUT",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/customers/:customerId",
+        "params": [
+          {
+            "name": "customerId",
+            "value": "",
+            "type": "path"
+          }
+        ],
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Update a customer"
+    },
+    {
+      "info": {
+        "name": "Search discount coupons",
+        "type": "http"
+      },
+      "http": {
+        "method": "GET",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/discount_coupons"
+      },
+      "docs": "Search discount coupons"
+    },
+    {
+      "info": {
+        "name": "Create a discount coupon",
+        "type": "http"
+      },
+      "http": {
+        "method": "POST",
+        "url": "https://app.ecwid.com/api/v3/{storeId}/discount_coupons",
+        "body": {
+          "type": "json",
+          "data": "{}"
+        }
+      },
+      "docs": "Create a discount coupon"
+    }
+  ],
+  "bundled": true
+}
