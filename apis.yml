@@ -43,7 +43,7 @@ apis:
     properties:
       - type: Documentation
         url: https://api-docs.ecwid.com/reference/overview
-      - type: Developer Portal
+      - type: DeveloperPortal
         url: https://developers.ecwid.com
       - type: GitHub Docs
         url: https://github.com/Ecwid/ecwid-api-docs
@@ -63,13 +63,13 @@ common:
     url: https://api-docs.ecwid.com/reference/overview
   - type: Pricing
     url: https://www.ecwid.com/pricing
-  - type: SignUp
+  - type: Signup
     url: https://my.ecwid.com/cp/?source=signup
   - type: StatusPage
     url: https://status.ecwid.com
   - type: GitHubOrganization
     url: https://github.com/Ecwid
-  - type: LLMsTxt
+  - type: LlmsText
     url: https://docs.ecwid.com/llms.txt
 maintainers:
   - FN: Kin Lane
