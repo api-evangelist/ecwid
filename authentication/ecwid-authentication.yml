@@ -1,0 +1,13 @@
+generated: '2026-07-11'
+method: derived
+source: openapi/ecwid-openapi.yml
+summary:
+  types:
+  - http
+schemes:
+- name: BearerAuth
+  type: http
+  scheme: bearer
+  description: OAuth 2.0 access token (private or public) used as a Bearer token.
+  sources:
+  - openapi/ecwid-openapi.yml

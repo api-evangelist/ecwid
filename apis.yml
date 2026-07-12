@@ -53,6 +53,10 @@ apis:
         url: https://docs.ecwid.com/get-started/make-your-first-api-request
 
 common:
+  - type: DomainSecurity
+    url: security/ecwid-domain-security.yml
+  - type: Authentication
+    url: authentication/ecwid-authentication.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/ecwid
   - type: Website
@@ -71,6 +75,8 @@ common:
     url: https://github.com/Ecwid
   - type: LlmsText
     url: https://docs.ecwid.com/llms.txt
+  - url: https://www.ecwid.com/blog/feed
+    type: Blog
 maintainers:
   - FN: Kin Lane
     email: kin@apievangelist.com
