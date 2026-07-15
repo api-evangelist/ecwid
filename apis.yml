@@ -53,6 +53,8 @@ apis:
         url: https://docs.ecwid.com/get-started/make-your-first-api-request
 
 common:
+  - type: AgenticAccess
+    url: agentic-access/ecwid-agentic-access.yml
   - type: DomainSecurity
     url: security/ecwid-domain-security.yml
   - type: Authentication
