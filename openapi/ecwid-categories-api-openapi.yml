@@ -1,0 +1,147 @@
+openapi: 3.1.0
+info:
+  title: Ecwid REST Categories API
+  description: 'JSON REST API for managing Ecwid by Lightspeed store data including
+
+    products, categories, orders, customers, discount coupons, payment and
+
+    shipping methods, and store profile. Requests are authenticated with
+
+    OAuth 2.0 access tokens (private for write access, public for read-only)
+
+    provided in the Authorization header as a Bearer token. This specification
+
+    is a best-effort, documentation-derived description and may omit fields.
+
+    '
+  version: 3.0.0
+  contact:
+    name: Ecwid by Lightspeed
+    url: https://api-docs.ecwid.com/reference/overview
+servers:
+- url: https://app.ecwid.com/api/v3/{storeId}
+  description: Store-scoped REST root
+  variables:
+    storeId:
+      default: '0'
+      description: Your Ecwid store identifier.
+security:
+- BearerAuth: []
+tags:
+- name: Categories
+paths:
+  /categories:
+    get:
+      summary: Search categories
+      operationId: searchCategories
+      parameters:
+      - in: query
+        name: parent
+        schema:
+          type: integer
+      - in: query
+        name: limit
+        schema:
+          type: integer
+      - in: query
+        name: offset
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Categories page
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CategoriesPage'
+      tags:
+      - Categories
+    post:
+      summary: Create a category
+      operationId: createCategory
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Category'
+      responses:
+        '200':
+          description: Created
+      tags:
+      - Categories
+  /categories/{categoryId}:
+    parameters:
+    - in: path
+      name: categoryId
+      required: true
+      schema:
+        type: integer
+    get:
+      summary: Get a category
+      operationId: getCategory
+      responses:
+        '200':
+          description: Category
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Category'
+      tags:
+      - Categories
+    put:
+      summary: Update a category
+      operationId: updateCategory
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Category'
+      responses:
+        '200':
+          description: Updated
+      tags:
+      - Categories
+    delete:
+      summary: Delete a category
+      operationId: deleteCategory
+      responses:
+        '200':
+          description: Deleted
+      tags:
+      - Categories
+components:
+  schemas:
+    Category:
+      type: object
+      additionalProperties: true
+      properties:
+        id:
+          type: integer
+        parentId:
+          type: integer
+        name:
+          type: string
+        enabled:
+          type: boolean
+        productIds:
+          type: array
+          items:
+            type: integer
+    CategoriesPage:
+      type: object
+      properties:
+        total:
+          type: integer
+        count:
+          type: integer
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Category'
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: OAuth 2.0 access token (private or public) used as a Bearer token.

@@ -1,0 +1,178 @@
+openapi: 3.1.0
+info:
+  title: Ecwid REST Categories Products API
+  description: 'JSON REST API for managing Ecwid by Lightspeed store data including
+
+    products, categories, orders, customers, discount coupons, payment and
+
+    shipping methods, and store profile. Requests are authenticated with
+
+    OAuth 2.0 access tokens (private for write access, public for read-only)
+
+    provided in the Authorization header as a Bearer token. This specification
+
+    is a best-effort, documentation-derived description and may omit fields.
+
+    '
+  version: 3.0.0
+  contact:
+    name: Ecwid by Lightspeed
+    url: https://api-docs.ecwid.com/reference/overview
+servers:
+- url: https://app.ecwid.com/api/v3/{storeId}
+  description: Store-scoped REST root
+  variables:
+    storeId:
+      default: '0'
+      description: Your Ecwid store identifier.
+security:
+- BearerAuth: []
+tags:
+- name: Products
+paths:
+  /products:
+    get:
+      summary: Search products
+      operationId: searchProducts
+      parameters:
+      - in: query
+        name: keyword
+        schema:
+          type: string
+      - in: query
+        name: limit
+        schema:
+          type: integer
+          maximum: 100
+      - in: query
+        name: offset
+        schema:
+          type: integer
+      - in: query
+        name: category
+        schema:
+          type: integer
+      - in: query
+        name: enabled
+        schema:
+          type: boolean
+      responses:
+        '200':
+          description: Products page
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductsPage'
+      tags:
+      - Products
+    post:
+      summary: Add a product
+      operationId: createProduct
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+      responses:
+        '200':
+          description: Product created
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+      tags:
+      - Products
+  /products/{productId}:
+    parameters:
+    - $ref: '#/components/parameters/ProductId'
+    get:
+      summary: Get a product
+      operationId: getProduct
+      responses:
+        '200':
+          description: Product
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+      tags:
+      - Products
+    put:
+      summary: Update a product
+      operationId: updateProduct
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Product'
+      responses:
+        '200':
+          description: Updated
+      tags:
+      - Products
+    delete:
+      summary: Delete a product
+      operationId: deleteProduct
+      responses:
+        '200':
+          description: Deleted
+      tags:
+      - Products
+components:
+  schemas:
+    ProductsPage:
+      type: object
+      properties:
+        total:
+          type: integer
+        count:
+          type: integer
+        offset:
+          type: integer
+        limit:
+          type: integer
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Product'
+    Product:
+      type: object
+      additionalProperties: true
+      properties:
+        id:
+          type: integer
+        sku:
+          type: string
+        name:
+          type: string
+        price:
+          type: number
+        enabled:
+          type: boolean
+        quantity:
+          type: integer
+        unlimited:
+          type: boolean
+        categoryIds:
+          type: array
+          items:
+            type: integer
+        description:
+          type: string
+  parameters:
+    ProductId:
+      in: path
+      name: productId
+      required: true
+      schema:
+        type: integer
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: OAuth 2.0 access token (private or public) used as a Bearer token.

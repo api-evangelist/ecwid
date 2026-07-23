@@ -1,0 +1,140 @@
+openapi: 3.1.0
+info:
+  title: Ecwid REST Categories Customers API
+  description: 'JSON REST API for managing Ecwid by Lightspeed store data including
+
+    products, categories, orders, customers, discount coupons, payment and
+
+    shipping methods, and store profile. Requests are authenticated with
+
+    OAuth 2.0 access tokens (private for write access, public for read-only)
+
+    provided in the Authorization header as a Bearer token. This specification
+
+    is a best-effort, documentation-derived description and may omit fields.
+
+    '
+  version: 3.0.0
+  contact:
+    name: Ecwid by Lightspeed
+    url: https://api-docs.ecwid.com/reference/overview
+servers:
+- url: https://app.ecwid.com/api/v3/{storeId}
+  description: Store-scoped REST root
+  variables:
+    storeId:
+      default: '0'
+      description: Your Ecwid store identifier.
+security:
+- BearerAuth: []
+tags:
+- name: Customers
+paths:
+  /customers:
+    get:
+      summary: Search customers
+      operationId: searchCustomers
+      parameters:
+      - in: query
+        name: keyword
+        schema:
+          type: string
+      - in: query
+        name: limit
+        schema:
+          type: integer
+      - in: query
+        name: offset
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: Customers page
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CustomersPage'
+      tags:
+      - Customers
+    post:
+      summary: Create a customer
+      operationId: createCustomer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Customer'
+      responses:
+        '200':
+          description: Created
+      tags:
+      - Customers
+  /customers/{customerId}:
+    parameters:
+    - in: path
+      name: customerId
+      required: true
+      schema:
+        type: integer
+    get:
+      summary: Get a customer
+      operationId: getCustomer
+      responses:
+        '200':
+          description: Customer
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Customer'
+      tags:
+      - Customers
+    put:
+      summary: Update a customer
+      operationId: updateCustomer
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Customer'
+      responses:
+        '200':
+          description: Updated
+      tags:
+      - Customers
+components:
+  schemas:
+    Customer:
+      type: object
+      additionalProperties: true
+      properties:
+        id:
+          type: integer
+        email:
+          type: string
+          format: email
+        billingPerson:
+          type: object
+          additionalProperties: true
+        shippingAddresses:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+    CustomersPage:
+      type: object
+      properties:
+        total:
+          type: integer
+        count:
+          type: integer
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Customer'
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: OAuth 2.0 access token (private or public) used as a Bearer token.

@@ -1,0 +1,160 @@
+openapi: 3.1.0
+info:
+  title: Ecwid REST Categories Orders API
+  description: 'JSON REST API for managing Ecwid by Lightspeed store data including
+
+    products, categories, orders, customers, discount coupons, payment and
+
+    shipping methods, and store profile. Requests are authenticated with
+
+    OAuth 2.0 access tokens (private for write access, public for read-only)
+
+    provided in the Authorization header as a Bearer token. This specification
+
+    is a best-effort, documentation-derived description and may omit fields.
+
+    '
+  version: 3.0.0
+  contact:
+    name: Ecwid by Lightspeed
+    url: https://api-docs.ecwid.com/reference/overview
+servers:
+- url: https://app.ecwid.com/api/v3/{storeId}
+  description: Store-scoped REST root
+  variables:
+    storeId:
+      default: '0'
+      description: Your Ecwid store identifier.
+security:
+- BearerAuth: []
+tags:
+- name: Orders
+paths:
+  /orders:
+    get:
+      summary: Search orders
+      operationId: searchOrders
+      parameters:
+      - in: query
+        name: keywords
+        schema:
+          type: string
+      - in: query
+        name: limit
+        schema:
+          type: integer
+      - in: query
+        name: offset
+        schema:
+          type: integer
+      - in: query
+        name: paymentStatus
+        schema:
+          type: string
+      - in: query
+        name: fulfillmentStatus
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Orders page
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrdersPage'
+      tags:
+      - Orders
+    post:
+      summary: Create an order
+      operationId: createOrder
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Order'
+      responses:
+        '200':
+          description: Created
+      tags:
+      - Orders
+  /orders/{orderNumber}:
+    parameters:
+    - in: path
+      name: orderNumber
+      required: true
+      schema:
+        type: integer
+    get:
+      summary: Get an order
+      operationId: getOrder
+      responses:
+        '200':
+          description: Order
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Order'
+      tags:
+      - Orders
+    put:
+      summary: Update an order
+      operationId: updateOrder
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Order'
+      responses:
+        '200':
+          description: Updated
+      tags:
+      - Orders
+    delete:
+      summary: Delete an order
+      operationId: deleteOrder
+      responses:
+        '200':
+          description: Deleted
+      tags:
+      - Orders
+components:
+  schemas:
+    OrdersPage:
+      type: object
+      properties:
+        total:
+          type: integer
+        count:
+          type: integer
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Order'
+    Order:
+      type: object
+      additionalProperties: true
+      properties:
+        orderNumber:
+          type: integer
+        vendorOrderNumber:
+          type: string
+        email:
+          type: string
+        total:
+          type: number
+        paymentStatus:
+          type: string
+        fulfillmentStatus:
+          type: string
+        items:
+          type: array
+          items:
+            type: object
+            additionalProperties: true
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: OAuth 2.0 access token (private or public) used as a Bearer token.

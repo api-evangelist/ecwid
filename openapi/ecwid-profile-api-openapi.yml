@@ -1,0 +1,85 @@
+openapi: 3.1.0
+info:
+  title: Ecwid REST Categories Profile API
+  description: 'JSON REST API for managing Ecwid by Lightspeed store data including
+
+    products, categories, orders, customers, discount coupons, payment and
+
+    shipping methods, and store profile. Requests are authenticated with
+
+    OAuth 2.0 access tokens (private for write access, public for read-only)
+
+    provided in the Authorization header as a Bearer token. This specification
+
+    is a best-effort, documentation-derived description and may omit fields.
+
+    '
+  version: 3.0.0
+  contact:
+    name: Ecwid by Lightspeed
+    url: https://api-docs.ecwid.com/reference/overview
+servers:
+- url: https://app.ecwid.com/api/v3/{storeId}
+  description: Store-scoped REST root
+  variables:
+    storeId:
+      default: '0'
+      description: Your Ecwid store identifier.
+security:
+- BearerAuth: []
+tags:
+- name: Profile
+paths:
+  /profile:
+    get:
+      summary: Get store profile
+      operationId: getStoreProfile
+      responses:
+        '200':
+          description: Store profile
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/StoreProfile'
+      tags:
+      - Profile
+    put:
+      summary: Update store profile
+      operationId: updateStoreProfile
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/StoreProfile'
+      responses:
+        '200':
+          description: Updated
+      tags:
+      - Profile
+components:
+  schemas:
+    StoreProfile:
+      type: object
+      additionalProperties: true
+      properties:
+        generalInfo:
+          type: object
+          additionalProperties: true
+        account:
+          type: object
+          additionalProperties: true
+        settings:
+          type: object
+          additionalProperties: true
+        company:
+          type: object
+          additionalProperties: true
+        formatsAndUnits:
+          type: object
+          additionalProperties: true
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: OAuth 2.0 access token (private or public) used as a Bearer token.

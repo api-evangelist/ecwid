@@ -1,0 +1,89 @@
+openapi: 3.1.0
+info:
+  title: Ecwid REST Categories Discount Coupons API
+  description: 'JSON REST API for managing Ecwid by Lightspeed store data including
+
+    products, categories, orders, customers, discount coupons, payment and
+
+    shipping methods, and store profile. Requests are authenticated with
+
+    OAuth 2.0 access tokens (private for write access, public for read-only)
+
+    provided in the Authorization header as a Bearer token. This specification
+
+    is a best-effort, documentation-derived description and may omit fields.
+
+    '
+  version: 3.0.0
+  contact:
+    name: Ecwid by Lightspeed
+    url: https://api-docs.ecwid.com/reference/overview
+servers:
+- url: https://app.ecwid.com/api/v3/{storeId}
+  description: Store-scoped REST root
+  variables:
+    storeId:
+      default: '0'
+      description: Your Ecwid store identifier.
+security:
+- BearerAuth: []
+tags:
+- name: Discount Coupons
+paths:
+  /discount_coupons:
+    get:
+      summary: Search discount coupons
+      operationId: searchCoupons
+      responses:
+        '200':
+          description: Coupons page
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  total:
+                    type: integer
+                  count:
+                    type: integer
+                  items:
+                    type: array
+                    items:
+                      $ref: '#/components/schemas/DiscountCoupon'
+      tags:
+      - Discount Coupons
+    post:
+      summary: Create a discount coupon
+      operationId: createCoupon
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/DiscountCoupon'
+      responses:
+        '200':
+          description: Created
+      tags:
+      - Discount Coupons
+components:
+  schemas:
+    DiscountCoupon:
+      type: object
+      additionalProperties: true
+      properties:
+        name:
+          type: string
+        code:
+          type: string
+        discountType:
+          type: string
+        status:
+          type: string
+        discount:
+          type: number
+  securitySchemes:
+    BearerAuth:
+      type: http
+      scheme: bearer
+      description: OAuth 2.0 access token (private or public) used as a Bearer token.
