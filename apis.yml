@@ -10,7 +10,19 @@ description: >-
   customers, payment and shipping methods, and storefront settings using
   OAuth 2.0 authentication with public (read-only) or private access tokens.
 type: Index
-image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/ecwid.png
 tags:
   - E-Commerce
   - Online Store
@@ -24,34 +36,91 @@ created: '2026-05-11'
 modified: '2026-05-11'
 specificationVersion: '0.19'
 apis:
-  - aid: ecwid:rest-api
-    name: Ecwid REST API
-    description: >-
-      JSON REST API for managing Ecwid store data including products,
-      categories, orders, customers, discount coupons, payment and shipping
-      methods, application data, and storefront settings. Requests are made
-      over HTTPS, authenticated via OAuth 2.0 access tokens (private for
-      write access, public for read-only).
-    humanURL: https://api-docs.ecwid.com/reference/overview
-    baseURL: https://app.ecwid.com/api/v3
-    tags:
-      - E-Commerce
-      - Online Store
-      - Storefront
-      - Products
-      - Orders
-    properties:
-      - type: Documentation
-        url: https://api-docs.ecwid.com/reference/overview
-      - type: DeveloperPortal
-        url: https://developers.ecwid.com
-      - type: GitHub Docs
-        url: https://github.com/Ecwid/ecwid-api-docs
-      - type: OAuth Token Endpoint
-        url: https://my.ecwid.com/api/oauth/token
-      - type: GettingStarted
-        url: https://docs.ecwid.com/get-started/make-your-first-api-request
-
+- aid: ecwid:rest-api
+  name: Ecwid REST API
+  description: >-
+    JSON REST API for managing Ecwid store data including products, categories, orders, customers, discount
+    coupons, payment and shipping methods, application data, and storefront settings. Requests are made
+    over HTTPS, authenticated via OAuth 2.0 access tokens (private for write access, public for read-only).
+  humanURL: https://api-docs.ecwid.com/reference/overview
+  baseURL: https://app.ecwid.com/api/v3
+  tags:
+  - E-Commerce
+  - Online Store
+  - Storefront
+  - Products
+  - Orders
+  properties:
+  - type: Documentation
+    url: https://api-docs.ecwid.com/reference/overview
+  - type: DeveloperPortal
+    url: https://developers.ecwid.com
+  - type: GitHub Docs
+    url: https://github.com/Ecwid/ecwid-api-docs
+  - type: OAuth Token Endpoint
+    url: https://my.ecwid.com/api/oauth/token
+  - type: GettingStarted
+    url: https://docs.ecwid.com/get-started/make-your-first-api-request
+- aid: ecwid:ecwid-categories-api
+  name: Ecwid by Lightspeed Categories API
+  description: The Categories API from Ecwid by Lightspeed — 2 operation(s) for categories.
+  humanURL: https://api-docs.ecwid.com/reference/overview
+  baseURL: https://app.ecwid.com/api/v3
+  tags:
+  - Categories
+  properties:
+  - type: OpenAPI
+    url: openapi/ecwid-categories-api-openapi.yml
+- aid: ecwid:ecwid-customers-api
+  name: Ecwid by Lightspeed Customers API
+  description: The Customers API from Ecwid by Lightspeed — 2 operation(s) for customers.
+  humanURL: https://api-docs.ecwid.com/reference/overview
+  baseURL: https://app.ecwid.com/api/v3
+  tags:
+  - Customers
+  properties:
+  - type: OpenAPI
+    url: openapi/ecwid-customers-api-openapi.yml
+- aid: ecwid:ecwid-discount-coupons-api
+  name: Ecwid by Lightspeed Discount Coupons API
+  description: The Discount Coupons API from Ecwid by Lightspeed — 1 operation(s) for discount coupons.
+  humanURL: https://api-docs.ecwid.com/reference/overview
+  baseURL: https://app.ecwid.com/api/v3
+  tags:
+  - Discount Coupons
+  properties:
+  - type: OpenAPI
+    url: openapi/ecwid-discount-coupons-api-openapi.yml
+- aid: ecwid:ecwid-orders-api
+  name: Ecwid by Lightspeed Orders API
+  description: The Orders API from Ecwid by Lightspeed — 2 operation(s) for orders.
+  humanURL: https://api-docs.ecwid.com/reference/overview
+  baseURL: https://app.ecwid.com/api/v3
+  tags:
+  - Orders
+  properties:
+  - type: OpenAPI
+    url: openapi/ecwid-orders-api-openapi.yml
+- aid: ecwid:ecwid-products-api
+  name: Ecwid by Lightspeed Products API
+  description: The Products API from Ecwid by Lightspeed — 2 operation(s) for products.
+  humanURL: https://api-docs.ecwid.com/reference/overview
+  baseURL: https://app.ecwid.com/api/v3
+  tags:
+  - Products
+  properties:
+  - type: OpenAPI
+    url: openapi/ecwid-products-api-openapi.yml
+- aid: ecwid:ecwid-profile-api
+  name: Ecwid by Lightspeed Profile API
+  description: The Profile API from Ecwid by Lightspeed — 1 operation(s) for profile.
+  humanURL: https://api-docs.ecwid.com/reference/overview
+  baseURL: https://app.ecwid.com/api/v3
+  tags:
+  - Profile
+  properties:
+  - type: OpenAPI
+    url: openapi/ecwid-profile-api-openapi.yml
 common:
   - type: AgenticAccess
     url: agentic-access/ecwid-agentic-access.yml
