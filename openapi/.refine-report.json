@@ -1,0 +1,24 @@
+{
+  "provider": "ecwid",
+  "sources": [
+    "ecwid-categories-api-openapi.yml",
+    "ecwid-customers-api-openapi.yml",
+    "ecwid-discount-coupons-api-openapi.yml",
+    "ecwid-orders-api-openapi.yml",
+    "ecwid-products-api-openapi.yml",
+    "ecwid-profile-api-openapi.yml"
+  ],
+  "outputs": [
+    "ecwid-categories-api-openapi.yml",
+    "ecwid-customers-api-openapi.yml",
+    "ecwid-discount-coupons-api-openapi.yml",
+    "ecwid-orders-api-openapi.yml",
+    "ecwid-products-api-openapi.yml",
+    "ecwid-profile-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
