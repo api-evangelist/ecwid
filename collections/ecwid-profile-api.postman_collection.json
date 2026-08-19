@@ -1,0 +1,241 @@
+{
+  "item": [
+    {
+      "id": "da5d4027-b2e3-4185-a3ea-7a062c9c8c41",
+      "name": "Profile",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "aae1564b-30a8-4b0f-87cf-6128e812dcfc",
+          "name": "Get store profile",
+          "request": {
+            "name": "Get store profile",
+            "description": {},
+            "url": {
+              "path": [
+                "profile"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your Ecwid store identifier.",
+                  "type": "any",
+                  "value": "{{storeId}}",
+                  "key": "storeId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "b57e12c4-d38d-479c-8f0c-d362751724e1",
+              "name": "Store profile",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "profile"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your Ecwid store identifier.",
+                      "type": "any",
+                      "value": "{{storeId}}",
+                      "key": "storeId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"generalInfo\": {\n    \"key_0\": true,\n    \"key_1\": false\n  },\n  \"account\": {\n    \"key_0\": 1919\n  },\n  \"settings\": {\n    \"key_0\": false,\n    \"key_1\": \"string\"\n  },\n  \"company\": {\n    \"key_0\": \"string\",\n    \"key_1\": 130.19451951767792,\n    \"key_2\": 3361\n  },\n  \"formatsAndUnits\": {\n    \"key_0\": 4815.334981330952\n  },\n  \"key_0\": true\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "042e695d-4b62-4cf5-86f5-b1e1f30e5428",
+          "name": "Update store profile",
+          "request": {
+            "name": "Update store profile",
+            "description": {},
+            "url": {
+              "path": [
+                "profile"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your Ecwid store identifier.",
+                  "type": "any",
+                  "value": "{{storeId}}",
+                  "key": "storeId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"generalInfo\": {\n    \"key_0\": 3347,\n    \"key_1\": 7896,\n    \"key_2\": \"string\"\n  },\n  \"account\": {\n    \"key_0\": 2745,\n    \"key_1\": \"string\",\n    \"key_2\": true\n  },\n  \"settings\": {\n    \"key_0\": 9380.649382882251,\n    \"key_1\": 4162.866791902003\n  },\n  \"company\": {\n    \"key_0\": \"string\",\n    \"key_1\": true,\n    \"key_2\": 5344\n  },\n  \"formatsAndUnits\": {\n    \"key_0\": true,\n    \"key_1\": 3009.958828069542\n  }\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "ebcb9dd0-d3e9-44c0-bda2-ff986105f0c2",
+              "name": "Updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "profile"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your Ecwid store identifier.",
+                      "type": "any",
+                      "value": "{{storeId}}",
+                      "key": "storeId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"generalInfo\": {\n    \"key_0\": true,\n    \"key_1\": false\n  },\n  \"account\": {\n    \"key_0\": 1919\n  },\n  \"settings\": {\n    \"key_0\": false,\n    \"key_1\": \"string\"\n  },\n  \"company\": {\n    \"key_0\": \"string\",\n    \"key_1\": 130.19451951767792,\n    \"key_2\": 3361\n  },\n  \"formatsAndUnits\": {\n    \"key_0\": 4815.334981330952\n  },\n  \"key_0\": true\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Your Ecwid store identifier.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "0",
+      "key": "storeId"
+    },
+    {
+      "type": "string",
+      "value": "https://app.ecwid.com/api/v3/{{storeId}}",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "a974f9fe-f12d-4bcc-8820-20d5305ba54a",
+    "name": "Ecwid REST Categories Profile API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "JSON REST API for managing Ecwid by Lightspeed store data including\nproducts, categories, orders, customers, discount coupons, payment and\nshipping methods, and store profile. Requests are authenticated with\nOAuth 2.0 access tokens (private for write access, public for read-only)\nprovided in the Authorization header as a Bearer token. This specification\nis a best-effort, documentation-derived description and may omit fields.\n\n\nContact Support:\n Name: Ecwid by Lightspeed",
+      "type": "text/plain"
+    }
+  }
+}

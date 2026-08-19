@@ -1,0 +1,50 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Ecwid REST Categories Profile API",
+    "version": "3.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Profile",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get store profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.ecwid.com/api/v3/{storeId}/profile"
+          },
+          "docs": "Get store profile"
+        },
+        {
+          "info": {
+            "name": "Update store profile",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.ecwid.com/api/v3/{storeId}/profile",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update store profile"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

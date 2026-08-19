@@ -1,0 +1,135 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Ecwid REST Categories Orders API",
+    "version": "3.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Orders",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search orders",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.ecwid.com/api/v3/{storeId}/orders",
+            "params": [
+              {
+                "name": "keywords",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "limit",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "offset",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "paymentStatus",
+                "value": "",
+                "type": "query"
+              },
+              {
+                "name": "fulfillmentStatus",
+                "value": "",
+                "type": "query"
+              }
+            ]
+          },
+          "docs": "Search orders"
+        },
+        {
+          "info": {
+            "name": "Create an order",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.ecwid.com/api/v3/{storeId}/orders",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create an order"
+        },
+        {
+          "info": {
+            "name": "Get an order",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.ecwid.com/api/v3/{storeId}/orders/:orderNumber",
+            "params": [
+              {
+                "name": "orderNumber",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Get an order"
+        },
+        {
+          "info": {
+            "name": "Update an order",
+            "type": "http"
+          },
+          "http": {
+            "method": "PUT",
+            "url": "https://app.ecwid.com/api/v3/{storeId}/orders/:orderNumber",
+            "params": [
+              {
+                "name": "orderNumber",
+                "value": "",
+                "type": "path"
+              }
+            ],
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Update an order"
+        },
+        {
+          "info": {
+            "name": "Delete an order",
+            "type": "http"
+          },
+          "http": {
+            "method": "DELETE",
+            "url": "https://app.ecwid.com/api/v3/{storeId}/orders/:orderNumber",
+            "params": [
+              {
+                "name": "orderNumber",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Delete an order"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}

@@ -1,0 +1,588 @@
+{
+  "item": [
+    {
+      "id": "669f77da-dac9-47cc-984a-91ce0a5dc6f2",
+      "name": "Categories",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "47cdae7e-b995-473e-8b9d-e7183975aa07",
+          "name": "Search categories",
+          "request": {
+            "name": "Search categories",
+            "description": {},
+            "url": {
+              "path": [
+                "categories"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [
+                {
+                  "disabled": false,
+                  "key": "parent",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "limit",
+                  "value": "<integer>"
+                },
+                {
+                  "disabled": false,
+                  "key": "offset",
+                  "value": "<integer>"
+                }
+              ],
+              "variable": [
+                {
+                  "description": "Your Ecwid store identifier.",
+                  "type": "any",
+                  "value": "{{storeId}}",
+                  "key": "storeId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "50007254-c3d5-4f7f-8e62-a4040ae7901d",
+              "name": "Categories page",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "categories"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [
+                    {
+                      "key": "parent",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "limit",
+                      "value": "<integer>"
+                    },
+                    {
+                      "key": "offset",
+                      "value": "<integer>"
+                    }
+                  ],
+                  "variable": [
+                    {
+                      "description": "Your Ecwid store identifier.",
+                      "type": "any",
+                      "value": "{{storeId}}",
+                      "key": "storeId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"total\": 5681,\n  \"count\": 4610,\n  \"items\": [\n    {\n      \"id\": 6481,\n      \"parentId\": 5162,\n      \"name\": \"string\",\n      \"enabled\": false,\n      \"productIds\": [\n        5501,\n        7693\n      ]\n    },\n    {\n      \"id\": 5014,\n      \"parentId\": 6816,\n      \"name\": \"string\",\n      \"enabled\": true,\n      \"productIds\": [\n        2081,\n        7076\n      ]\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "429bf2ca-6b60-41bc-a56a-a5134b95f0ae",
+          "name": "Create a category",
+          "request": {
+            "name": "Create a category",
+            "description": {},
+            "url": {
+              "path": [
+                "categories"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your Ecwid store identifier.",
+                  "type": "any",
+                  "value": "{{storeId}}",
+                  "key": "storeId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"parentId\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"enabled\": \"<boolean>\",\n  \"productIds\": [\n    \"<integer>\",\n    \"<integer>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "53fd9f13-e4a3-4e6c-bda7-27845566f192",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "categories"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your Ecwid store identifier.",
+                      "type": "any",
+                      "value": "{{storeId}}",
+                      "key": "storeId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"parentId\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"enabled\": \"<boolean>\",\n  \"productIds\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"key_0\": \"string\",\n  \"key_1\": \"string\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "62ebb0c1-489e-40f0-b742-835a94ad2a12",
+          "name": "Get a category",
+          "request": {
+            "name": "Get a category",
+            "description": {},
+            "url": {
+              "path": [
+                "categories",
+                ":categoryId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "categoryId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Your Ecwid store identifier.",
+                  "type": "any",
+                  "value": "{{storeId}}",
+                  "key": "storeId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ccbafad4-bf36-4ff7-b65c-0c1d18a410e6",
+              "name": "Category",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "categories",
+                    ":categoryId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "categoryId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "Your Ecwid store identifier.",
+                      "type": "any",
+                      "value": "{{storeId}}",
+                      "key": "storeId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"id\": 7535,\n  \"parentId\": 976,\n  \"name\": \"string\",\n  \"enabled\": true,\n  \"productIds\": [\n    1204,\n    2809\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "ed57fbdd-838f-42ac-a86d-32137154ec38",
+          "name": "Update a category",
+          "request": {
+            "name": "Update a category",
+            "description": {},
+            "url": {
+              "path": [
+                "categories",
+                ":categoryId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "categoryId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Your Ecwid store identifier.",
+                  "type": "any",
+                  "value": "{{storeId}}",
+                  "key": "storeId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "PUT",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"id\": \"<integer>\",\n  \"parentId\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"enabled\": \"<boolean>\",\n  \"productIds\": [\n    \"<integer>\",\n    \"<integer>\"\n  ]\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "b3a2138a-27a1-4da8-b6f4-7959ea08bbd6",
+              "name": "Updated",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "categories",
+                    ":categoryId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "categoryId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "Your Ecwid store identifier.",
+                      "type": "any",
+                      "value": "{{storeId}}",
+                      "key": "storeId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "PUT",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"id\": \"<integer>\",\n  \"parentId\": \"<integer>\",\n  \"name\": \"<string>\",\n  \"enabled\": \"<boolean>\",\n  \"productIds\": [\n    \"<integer>\",\n    \"<integer>\"\n  ],\n  \"key_0\": \"string\",\n  \"key_1\": \"string\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "a4dadbd0-3f50-4c22-ace1-61f76a64daef",
+          "name": "Delete a category",
+          "request": {
+            "name": "Delete a category",
+            "description": {},
+            "url": {
+              "path": [
+                "categories",
+                ":categoryId"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "disabled": false,
+                  "type": "any",
+                  "value": "<integer>",
+                  "key": "categoryId",
+                  "description": "(Required) "
+                },
+                {
+                  "description": "Your Ecwid store identifier.",
+                  "type": "any",
+                  "value": "{{storeId}}",
+                  "key": "storeId"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "ae80a67c-974b-4ba8-aa5d-bd5bc4341f79",
+              "name": "Deleted",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "categories",
+                    ":categoryId"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "disabled": false,
+                      "type": "any",
+                      "value": "<integer>",
+                      "key": "categoryId",
+                      "description": "(Required) "
+                    },
+                    {
+                      "description": "Your Ecwid store identifier.",
+                      "type": "any",
+                      "value": "{{storeId}}",
+                      "key": "storeId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "DELETE",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Your Ecwid store identifier.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "0",
+      "key": "storeId"
+    },
+    {
+      "type": "string",
+      "value": "https://app.ecwid.com/api/v3/{{storeId}}",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "f8beb6df-c311-4585-9012-856308af74fd",
+    "name": "Ecwid REST Categories API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "JSON REST API for managing Ecwid by Lightspeed store data including\nproducts, categories, orders, customers, discount coupons, payment and\nshipping methods, and store profile. Requests are authenticated with\nOAuth 2.0 access tokens (private for write access, public for read-only)\nprovided in the Authorization header as a Bearer token. This specification\nis a best-effort, documentation-derived description and may omit fields.\n\n\nContact Support:\n Name: Ecwid by Lightspeed",
+      "type": "text/plain"
+    }
+  }
+}

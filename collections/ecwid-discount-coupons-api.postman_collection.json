@@ -1,0 +1,241 @@
+{
+  "item": [
+    {
+      "id": "42e8ba21-deec-45e7-981e-b3085ae447f3",
+      "name": "Discount Coupons",
+      "description": {
+        "content": "",
+        "type": "text/plain"
+      },
+      "item": [
+        {
+          "id": "629f29fb-05a9-4c2e-8d64-3bd4f2a56ff0",
+          "name": "Search discount coupons",
+          "request": {
+            "name": "Search discount coupons",
+            "description": {},
+            "url": {
+              "path": [
+                "discount_coupons"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your Ecwid store identifier.",
+                  "type": "any",
+                  "value": "{{storeId}}",
+                  "key": "storeId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "method": "GET",
+            "auth": null
+          },
+          "response": [
+            {
+              "id": "8708aa00-8ceb-4052-9d6c-9a8416bd8cd1",
+              "name": "Coupons page",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "discount_coupons"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your Ecwid store identifier.",
+                      "type": "any",
+                      "value": "{{storeId}}",
+                      "key": "storeId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  },
+                  {
+                    "key": "Accept",
+                    "value": "application/json"
+                  }
+                ],
+                "method": "GET",
+                "body": {}
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "body": "{\n  \"total\": 9783,\n  \"count\": 594,\n  \"items\": [\n    {\n      \"name\": \"string\",\n      \"code\": \"string\",\n      \"discountType\": \"string\",\n      \"status\": \"string\",\n      \"discount\": 3837.587150189039\n    },\n    {\n      \"name\": \"string\",\n      \"code\": \"string\",\n      \"discountType\": \"string\",\n      \"status\": \"string\",\n      \"discount\": 2380.2067808518523\n    }\n  ]\n}",
+              "cookie": [],
+              "_postman_previewlanguage": "json"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        },
+        {
+          "id": "143bc1b2-10f8-467c-aefd-37f5a08fd059",
+          "name": "Create a discount coupon",
+          "request": {
+            "name": "Create a discount coupon",
+            "description": {},
+            "url": {
+              "path": [
+                "discount_coupons"
+              ],
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "query": [],
+              "variable": [
+                {
+                  "description": "Your Ecwid store identifier.",
+                  "type": "any",
+                  "value": "{{storeId}}",
+                  "key": "storeId"
+                }
+              ]
+            },
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "method": "POST",
+            "auth": null,
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"<string>\",\n  \"code\": \"<string>\",\n  \"discountType\": \"<string>\",\n  \"status\": \"<string>\",\n  \"discount\": \"<number>\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          },
+          "response": [
+            {
+              "id": "5a3d2de0-49de-45aa-911d-18b256a50b7a",
+              "name": "Created",
+              "originalRequest": {
+                "url": {
+                  "path": [
+                    "discount_coupons"
+                  ],
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "query": [],
+                  "variable": [
+                    {
+                      "description": "Your Ecwid store identifier.",
+                      "type": "any",
+                      "value": "{{storeId}}",
+                      "key": "storeId"
+                    }
+                  ]
+                },
+                "header": [
+                  {
+                    "description": {
+                      "content": "Added as a part of security scheme: bearer",
+                      "type": "text/plain"
+                    },
+                    "key": "Authorization",
+                    "value": "Bearer <token>"
+                  }
+                ],
+                "method": "POST",
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\n  \"name\": \"<string>\",\n  \"code\": \"<string>\",\n  \"discountType\": \"<string>\",\n  \"status\": \"<string>\",\n  \"discount\": \"<number>\"\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "text/plain"
+                }
+              ],
+              "body": "",
+              "cookie": [],
+              "_postman_previewlanguage": "text"
+            }
+          ],
+          "event": [],
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          }
+        }
+      ],
+      "event": []
+    }
+  ],
+  "event": [],
+  "variable": [
+    {
+      "description": {
+        "content": "Your Ecwid store identifier.",
+        "type": "text/plain"
+      },
+      "type": "any",
+      "value": "0",
+      "key": "storeId"
+    },
+    {
+      "type": "string",
+      "value": "https://app.ecwid.com/api/v3/{{storeId}}",
+      "key": "baseUrl"
+    }
+  ],
+  "auth": {
+    "type": "bearer",
+    "bearer": [
+      {
+        "key": "token",
+        "value": "{{bearerToken}}"
+      }
+    ]
+  },
+  "info": {
+    "_postman_id": "3f887eae-ab5d-4eca-8803-f2e039c4930a",
+    "name": "Ecwid REST Categories Discount Coupons API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": {
+      "content": "JSON REST API for managing Ecwid by Lightspeed store data including\nproducts, categories, orders, customers, discount coupons, payment and\nshipping methods, and store profile. Requests are authenticated with\nOAuth 2.0 access tokens (private for write access, public for read-only)\nprovided in the Authorization header as a Bearer token. This specification\nis a best-effort, documentation-derived description and may omit fields.\n\n\nContact Support:\n Name: Ecwid by Lightspeed",
+      "type": "text/plain"
+    }
+  }
+}

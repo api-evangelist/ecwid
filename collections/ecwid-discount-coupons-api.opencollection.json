@@ -1,0 +1,50 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "Ecwid REST Categories Discount Coupons API",
+    "version": "3.0.0"
+  },
+  "request": {
+    "auth": {
+      "type": "bearer",
+      "token": "{{bearerToken}}"
+    }
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Discount Coupons",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Search discount coupons",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://app.ecwid.com/api/v3/{storeId}/discount_coupons"
+          },
+          "docs": "Search discount coupons"
+        },
+        {
+          "info": {
+            "name": "Create a discount coupon",
+            "type": "http"
+          },
+          "http": {
+            "method": "POST",
+            "url": "https://app.ecwid.com/api/v3/{storeId}/discount_coupons",
+            "body": {
+              "type": "json",
+              "data": "{}"
+            }
+          },
+          "docs": "Create a discount coupon"
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
