@@ -28,6 +28,13 @@ tags:
   - Online Store
   - Storefront
   - Retail
+  - Point-of-Sale
+  - Multi-Channel Commerce
+tags_raw:
+  - E-Commerce
+  - Online Store
+  - Storefront
+  - Retail
   - Point of Sale
   - Multi-Channel Commerce
 url: >-
@@ -45,6 +52,12 @@ apis:
   humanURL: https://api-docs.ecwid.com/reference/overview
   baseURL: https://app.ecwid.com/api/v3
   tags:
+  - E-Commerce
+  - Online Store
+  - Storefront
+  - Product
+  - Order
+  tags_raw:
   - E-Commerce
   - Online Store
   - Storefront
@@ -97,6 +110,8 @@ apis:
   humanURL: https://api-docs.ecwid.com/reference/overview
   baseURL: https://app.ecwid.com/api/v3
   tags:
+  - Order
+  tags_raw:
   - Orders
   properties:
   - type: OpenAPI
@@ -107,6 +122,8 @@ apis:
   humanURL: https://api-docs.ecwid.com/reference/overview
   baseURL: https://app.ecwid.com/api/v3
   tags:
+  - Product
+  tags_raw:
   - Products
   properties:
   - type: OpenAPI
