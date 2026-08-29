@@ -151,6 +151,9 @@ apis:
   - type: OpenAPI
     url: openapi/ecwid-profile-api-openapi.yml
 common:
+  - type: CapabilityMap
+    url: capabilities/ecwid-capability-edges.yml
+    name: Ecwid by Lightspeed Business Capability Map
   - type: AgenticAccess
     url: agentic-access/ecwid-agentic-access.yml
   - type: DomainSecurity
