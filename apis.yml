@@ -147,6 +147,8 @@ apis:
   humanURL: https://api-docs.ecwid.com/reference/overview
   baseURL: https://app.ecwid.com/api/v3
   tags:
+  - Profiles
+  tags_raw:
   - Profile
   properties:
   - type: OpenAPI
