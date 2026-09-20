@@ -154,6 +154,8 @@ apis:
   - type: OpenAPI
     url: openapi/ecwid-profile-api-openapi.yml
 common:
+  - type: Plans
+    url: plans/ecwid-plans-pricing.yml
   - type: CapabilityMap
     url: capabilities/ecwid-capability-edges.yml
     name: Ecwid by Lightspeed Business Capability Map

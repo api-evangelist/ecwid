@@ -1,0 +1,38 @@
+# Pricing transcribed from the provider's own page — see provenance. Numbers are quoted, not derived.
+generated: '2026-09-20'
+method: searched
+source: https://www.ecwid.com/pricing
+sources:
+- https://www.ecwid.com/pricing
+provenance:
+  tool: planning/api-economics/harvest_pricing.py
+  run: 20260920T120546
+  grounding: every price_text was found verbatim in the fetched page text
+audience: business-product
+pricing_basis: tiered-subscription
+published: true
+note: Prices displayed in a multi-currency toggle ($, MX$, £, AU$, ₹, €); monthly values listed first,
+  annual (save 16%) values second. Page states no setup or transaction fees (transaction fees row shows
+  0 for all plans).
+plan_count: 4
+plans:
+- name: Starter
+  price_text: '5'
+  price: 5
+  period: month
+  included_quota: Up to 10 products, 70+ site templates, Default company.site domain, Email support
+- name: Venture
+  price_text: '35'
+  price: 35
+  period: month
+  included_quota: Up to 100 products + e-goods; annual price 29 per month
+- name: Business
+  price_text: '65'
+  price: 65
+  period: month
+  included_quota: Up to 2,500 products; annual price 49 per month
+- name: Unlimited
+  price_text: '149'
+  price: 149
+  period: month
+  included_quota: Unlimited products, POS, unlimited staff; annual price 119 per month
