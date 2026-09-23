@@ -1,6 +1,6 @@
-openapi: 3.1.0
+openapi: 3.2.0
 info:
-  title: Ecwid REST Categories Customers API
+  title: Ecwid REST Customers API
   description: 'JSON REST API for managing Ecwid by Lightspeed store data including
 
     products, categories, orders, customers, discount coupons, payment and
@@ -11,9 +11,7 @@ info:
 
     provided in the Authorization header as a Bearer token. This specification
 
-    is a best-effort, documentation-derived description and may omit fields.
-
-    '
+    is a best-effort, documentation-derived description and may omit fields.'
   version: 3.0.0
   contact:
     name: Ecwid by Lightspeed
@@ -105,6 +103,17 @@ paths:
       - Customers
 components:
   schemas:
+    CustomersPage:
+      type: object
+      properties:
+        total:
+          type: integer
+        count:
+          type: integer
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Customer'
     Customer:
       type: object
       additionalProperties: true
@@ -122,17 +131,6 @@ components:
           items:
             type: object
             additionalProperties: true
-    CustomersPage:
-      type: object
-      properties:
-        total:
-          type: integer
-        count:
-          type: integer
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Customer'
   securitySchemes:
     BearerAuth:
       type: http

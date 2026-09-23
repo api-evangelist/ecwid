@@ -1,12 +1,7 @@
 {
   "provider": "ecwid",
   "sources": [
-    "ecwid-categories-api-openapi.yml",
-    "ecwid-customers-api-openapi.yml",
-    "ecwid-discount-coupons-api-openapi.yml",
-    "ecwid-orders-api-openapi.yml",
-    "ecwid-products-api-openapi.yml",
-    "ecwid-profile-api-openapi.yml"
+    "_original/ecwid-openapi.yml"
   ],
   "outputs": [
     "ecwid-categories-api-openapi.yml",
@@ -19,6 +14,46 @@
   "archived": [],
   "errors": [],
   "warnings": [],
-  "notes": [],
-  "skipped": []
+  "notes": [
+    "sourced from openapi/_original/ (1 archived document(s)); previously refined output at the top level was skipped rather than re-split",
+    "ecwid-openapi.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
+    "ecwid-openapi.yml: tagged paths GET /profile -> Profile",
+    "ecwid-openapi.yml: tagged paths PUT /profile -> Profile",
+    "ecwid-openapi.yml: tagged paths GET /products -> Products",
+    "ecwid-openapi.yml: tagged paths POST /products -> Products",
+    "ecwid-openapi.yml: tagged paths GET /products/{productId} -> Products",
+    "ecwid-openapi.yml: tagged paths PUT /products/{productId} -> Products",
+    "ecwid-openapi.yml: tagged paths DELETE /products/{productId} -> Products",
+    "ecwid-openapi.yml: tagged paths GET /categories -> Categories",
+    "ecwid-openapi.yml: tagged paths POST /categories -> Categories",
+    "ecwid-openapi.yml: tagged paths GET /categories/{categoryId} -> Categories",
+    "ecwid-openapi.yml: tagged paths PUT /categories/{categoryId} -> Categories",
+    "ecwid-openapi.yml: tagged paths DELETE /categories/{categoryId} -> Categories",
+    "ecwid-openapi.yml: tagged paths GET /orders -> Orders",
+    "ecwid-openapi.yml: tagged paths POST /orders -> Orders",
+    "ecwid-openapi.yml: tagged paths GET /orders/{orderNumber} -> Orders",
+    "ecwid-openapi.yml: tagged paths PUT /orders/{orderNumber} -> Orders",
+    "ecwid-openapi.yml: tagged paths DELETE /orders/{orderNumber} -> Orders",
+    "ecwid-openapi.yml: tagged paths GET /customers -> Customers",
+    "ecwid-openapi.yml: tagged paths POST /customers -> Customers",
+    "ecwid-openapi.yml: tagged paths GET /customers/{customerId} -> Customers",
+    "ecwid-openapi.yml: tagged paths PUT /customers/{customerId} -> Customers",
+    "ecwid-openapi.yml: tagged paths GET /discount_coupons -> Discount Coupons",
+    "ecwid-openapi.yml: tagged paths POST /discount_coupons -> Discount Coupons",
+    "ecwid-openapi.yml: declared missing tag: Categories",
+    "ecwid-openapi.yml: declared missing tag: Customers",
+    "ecwid-openapi.yml: declared missing tag: Discount Coupons",
+    "ecwid-openapi.yml: declared missing tag: Orders",
+    "ecwid-openapi.yml: declared missing tag: Products",
+    "ecwid-openapi.yml: declared missing tag: Profile",
+    "apis.yml register: already-registered"
+  ],
+  "skipped": [
+    "ecwid-categories-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "ecwid-customers-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "ecwid-discount-coupons-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "ecwid-orders-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "ecwid-products-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "ecwid-profile-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
