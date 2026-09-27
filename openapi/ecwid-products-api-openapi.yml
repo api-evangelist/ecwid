@@ -122,13 +122,6 @@ paths:
       tags:
       - Products
 components:
-  parameters:
-    ProductId:
-      in: path
-      name: productId
-      required: true
-      schema:
-        type: integer
   schemas:
     Product:
       type: object
@@ -169,6 +162,13 @@ components:
           type: array
           items:
             $ref: '#/components/schemas/Product'
+  parameters:
+    ProductId:
+      in: path
+      name: productId
+      required: true
+      schema:
+        type: integer
   securitySchemes:
     BearerAuth:
       type: http
