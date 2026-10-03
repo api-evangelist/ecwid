@@ -103,17 +103,6 @@ paths:
       - Customers
 components:
   schemas:
-    CustomersPage:
-      type: object
-      properties:
-        total:
-          type: integer
-        count:
-          type: integer
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Customer'
     Customer:
       type: object
       additionalProperties: true
@@ -131,6 +120,17 @@ components:
           items:
             type: object
             additionalProperties: true
+    CustomersPage:
+      type: object
+      properties:
+        total:
+          type: integer
+        count:
+          type: integer
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Customer'
   securitySchemes:
     BearerAuth:
       type: http
