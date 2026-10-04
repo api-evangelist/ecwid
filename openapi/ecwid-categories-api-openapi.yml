@@ -111,6 +111,17 @@ paths:
       - Categories
 components:
   schemas:
+    CategoriesPage:
+      type: object
+      properties:
+        total:
+          type: integer
+        count:
+          type: integer
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Category'
     Category:
       type: object
       additionalProperties: true
@@ -127,17 +138,6 @@ components:
           type: array
           items:
             type: integer
-    CategoriesPage:
-      type: object
-      properties:
-        total:
-          type: integer
-        count:
-          type: integer
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Category'
   securitySchemes:
     BearerAuth:
       type: http

@@ -123,6 +123,21 @@ paths:
       - Products
 components:
   schemas:
+    ProductsPage:
+      type: object
+      properties:
+        total:
+          type: integer
+        count:
+          type: integer
+        offset:
+          type: integer
+        limit:
+          type: integer
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Product'
     Product:
       type: object
       additionalProperties: true
@@ -147,21 +162,6 @@ components:
             type: integer
         description:
           type: string
-    ProductsPage:
-      type: object
-      properties:
-        total:
-          type: integer
-        count:
-          type: integer
-        offset:
-          type: integer
-        limit:
-          type: integer
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Product'
   parameters:
     ProductId:
       in: path
