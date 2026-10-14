@@ -229,7 +229,6 @@
   arazzo: null
 - slug: ecwid-monday-com
   label: monday.com
-  partner: monday-com
   partner_name: monday.com
   category: Project Management
   type: marketplace
@@ -237,7 +236,7 @@
   channel: ipaas-usage
   evidence: https://zapier.com/apps/ecwid/integrations/monday
   source: edge
-  status: pending-generation
+  status: pending-partner-spec
   arazzo: null
 - slug: ecwid-twilio
   label: Twilio
@@ -349,7 +348,6 @@
   arazzo: null
 - slug: ecwid-microsoft-excel
   label: Microsoft Excel
-  partner: microsoft-excel
   partner_name: Microsoft Excel
   category: Microsoft
   type: marketplace
@@ -357,7 +355,7 @@
   channel: ipaas-usage
   evidence: https://zapier.com/apps/ecwid/integrations/excel
   source: edge
-  status: pending-generation
+  status: pending-partner-spec
   arazzo: null
 - slug: ecwid-facebook-conversions-for-business-admins
   label: Facebook Conversions (for Business admins)
@@ -428,4 +426,17 @@
   evidence: https://zapier.com/apps/ecwid/integrations/zoho-cliq
   source: edge
   status: pending-generation
+  arazzo: null
+- slug: ecwid-clover-own
+  label: Clover (own)
+  partner: clover
+  partner_name: Clover (own)
+  category: BAKERY
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.clover.com/appmarket/apps/G5CYTR17H995T
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
   arazzo: null

@@ -4,6 +4,7 @@ source:
 - https://zapier.com/apps/ecwid/integrations
 - https://n8n.io/integrations/ecwid/
 checked:
+- clover/integrations/clover-integration-edges.yml
 - https://composio.dev/toolkits/ecwid
 - https://monid.ai/tools/ecwid
 - https://n8n.io/integrations/ecwid/
@@ -951,6 +952,24 @@ edges:
   direction: third-party
   category: Website Builders
   partner_url: http://cliq.zoho.com/
+- partner_name: Clover (own)
+  partner: clover
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.clover.com/appmarket/apps/G5CYTR17H995T
+  mirror_of: clover/integrations/clover-integration-edges.yml
+  apps:
+  - Ecwid Connector
+  - Sell Online
+  listing_count: 2
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: BAKERY
 templates:
 - title: Save new Ecwid orders to Google Sheets rows
   url: https://zapier.com/apps/ecwid/integrations/google-sheets/6201/save-new-ecwid-orders-to-google-sheets-rows
