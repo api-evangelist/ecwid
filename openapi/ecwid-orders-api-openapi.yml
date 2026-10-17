@@ -119,6 +119,17 @@ paths:
       - Orders
 components:
   schemas:
+    OrdersPage:
+      type: object
+      properties:
+        total:
+          type: integer
+        count:
+          type: integer
+        items:
+          type: array
+          items:
+            $ref: '#/components/schemas/Order'
     Order:
       type: object
       additionalProperties: true
@@ -140,17 +151,6 @@ components:
           items:
             type: object
             additionalProperties: true
-    OrdersPage:
-      type: object
-      properties:
-        total:
-          type: integer
-        count:
-          type: integer
-        items:
-          type: array
-          items:
-            $ref: '#/components/schemas/Order'
   securitySchemes:
     BearerAuth:
       type: http
