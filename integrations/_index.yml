@@ -427,6 +427,35 @@
   source: edge
   status: pending-generation
   arazzo: null
+- slug: ecwid-meltano
+  label: Meltano
+  partner: meltano
+  partner_name: Meltano
+  type: marketplace
+  marketplace: meltano-hub
+  channel: elt-connector
+  evidence: https://hub.meltano.com/extractors/tap-ecwid--hotgluexyz
+  source: edge
+  relationship: ipaas-bridge
+  contract_reference:
+    register: Meltano Hub (github.com/meltano/hub _data/meltano extractors + loaders)
+    spec_file: null
+    role: elt-connector:meltano-hub
+    registered_name: Ecwid
+    matched_domain: ecwid.com
+    matched_by: domain
+    detected_by: sweep-data-integration.py
+    detected: '2026-10-18'
+    signal_note: one edge per (provider, platform); connectors, streams, packages and usage are context, never read
+    plugins:
+    - tap-ecwid--hotgluexyz
+    maintenance_status:
+    - active
+    quality:
+    - gold
+    builder: 'community (Meltano Hub variant maintainers: hotgluexyz)'
+  status: not-a-workflow
+  arazzo: null
 - slug: ecwid-clover-own
   label: Clover (own)
   partner: clover
@@ -436,6 +465,19 @@
   marketplace: own
   channel: partner-built
   evidence: https://www.clover.com/appmarket/apps/G5CYTR17H995T
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ecwid-wordpress-own
+  label: WordPress (own)
+  partner: wordpress
+  partner_name: WordPress (own)
+  category: WordPress plugin
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://wordpress.org/plugins/ecwid-shopping-cart/
   source: edge
   relationship: platform-app
   status: not-a-workflow
@@ -472,7 +514,7 @@
   type: marketplace
   marketplace: pipedream-components
   channel: open-source-node
-  evidence: https://github.com/PipedreamHQ/pipedream/tree/94800dd6de6640b942c65ea7ee655f71ac56d438/components/ecwid
+  evidence: https://github.com/PipedreamHQ/pipedream/tree/d5872355ef27b4efa769f05352f2820c299a456e/components/ecwid
   source: edge
   relationship: ipaas-bridge
   contract_reference:
@@ -489,34 +531,5 @@
     actions: true
     sources: true
     builder: Pipedream repo (component)
-  status: not-a-workflow
-  arazzo: null
-- slug: ecwid-meltano
-  label: Meltano
-  partner: meltano
-  partner_name: Meltano
-  type: marketplace
-  marketplace: meltano-hub
-  channel: elt-connector
-  evidence: https://hub.meltano.com/extractors/tap-ecwid--hotgluexyz
-  source: edge
-  relationship: ipaas-bridge
-  contract_reference:
-    register: Meltano Hub (github.com/meltano/hub _data/meltano extractors + loaders)
-    spec_file: null
-    role: elt-connector:meltano-hub
-    registered_name: Ecwid
-    matched_domain: ecwid.com
-    matched_by: domain
-    detected_by: sweep-data-integration.py
-    detected: '2026-10-18'
-    signal_note: one edge per (provider, platform); connectors, streams, packages and usage are context, never read
-    plugins:
-    - tap-ecwid--hotgluexyz
-    maintenance_status:
-    - active
-    quality:
-    - gold
-    builder: 'community (Meltano Hub variant maintainers: hotgluexyz)'
   status: not-a-workflow
   arazzo: null
