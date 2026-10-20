@@ -15,6 +15,7 @@
   evidence: https://zapier.com/apps/ecwid/integrations/google-sheets/6201/save-new-ecwid-orders-to-google-sheets-rows
   template: https://zapier.com/apps/ecwid/integrations/google-sheets/6201/save-new-ecwid-orders-to-google-sheets-rows
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: ecwid-add-line-items-from-new-ecwid-paid-orders-to-google-sheets-as-multiple-rows
@@ -29,6 +30,7 @@
   evidence: https://zapier.com/apps/ecwid/integrations/google-sheets/13766/add-line-items-from-new-ecwid-paid-orders-to-google-sheets-as-multiple-rows
   template: https://zapier.com/apps/ecwid/integrations/google-sheets/13766/add-line-items-from-new-ecwid-paid-orders-to-google-sheets-as-multiple-rows
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: ecwid-add-new-ecwid-customers-to-mailchimp
@@ -43,6 +45,7 @@
   evidence: https://zapier.com/apps/ecwid/integrations/mailchimp/5620/add-new-ecwid-customers-to-mailchimp
   template: https://zapier.com/apps/ecwid/integrations/mailchimp/5620/add-new-ecwid-customers-to-mailchimp
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: ecwid-add-new-ecwid-customers-to-klaviyo
@@ -57,6 +60,7 @@
   evidence: https://zapier.com/apps/ecwid/integrations/klaviyo/418039/add-new-ecwid-customers-to-klaviyo
   template: https://zapier.com/apps/ecwid/integrations/klaviyo/418039/add-new-ecwid-customers-to-klaviyo
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: ecwid-create-constant-contact-contacts-from-new-customers-in-ecwid
@@ -71,6 +75,7 @@
   evidence: https://zapier.com/apps/constant-contact/integrations/ecwid/411886/create-constant-contact-contacts-from-new-customers-in-ecwid
   template: https://zapier.com/apps/constant-contact/integrations/ecwid/411886/create-constant-contact-contacts-from-new-customers-in-ecwid
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: ecwid-add-or-update-mailchimp-subscribers-for-new-orders-in-ecwid
@@ -85,6 +90,7 @@
   evidence: https://zapier.com/apps/ecwid/integrations/mailchimp/176216/add-or-update-mailchimp-subscribers-for-new-orders-in-ecwid
   template: https://zapier.com/apps/ecwid/integrations/mailchimp/176216/add-or-update-mailchimp-subscribers-for-new-orders-in-ecwid
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: ecwid-add-new-ecwid-by-lightspeed-customers-to-google-ads-contact-list
@@ -99,6 +105,7 @@
   evidence: https://zapier.com/apps/ecwid/integrations/google-ads/1612952/add-new-ecwid-by-lightspeed-customers-to-google-ads-contact-list
   template: https://zapier.com/apps/ecwid/integrations/google-ads/1612952/add-new-ecwid-by-lightspeed-customers-to-google-ads-contact-list
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: ecwid-add-new-ecwid-orders-to-shippo
@@ -113,6 +120,7 @@
   evidence: https://zapier.com/apps/ecwid/integrations/shippo/45548/add-new-ecwid-orders-to-shippo
   template: https://zapier.com/apps/ecwid/integrations/shippo/45548/add-new-ecwid-orders-to-shippo
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: ecwid-send-new-ecwid-orders-to-xero-line-item-support
@@ -127,6 +135,7 @@
   evidence: https://zapier.com/apps/ecwid/integrations/xero/5623/send-new-ecwid-orders-to-xero-line-item-support
   template: https://zapier.com/apps/ecwid/integrations/xero/5623/send-new-ecwid-orders-to-xero-line-item-support
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: ecwid-add-new-mailchimp-subscribers-from-new-ecwid-customers
@@ -141,6 +150,7 @@
   evidence: https://zapier.com/apps/ecwid/integrations/mailchimp/8597/add-new-mailchimp-subscribers-from-new-ecwid-customers
   template: https://zapier.com/apps/ecwid/integrations/mailchimp/8597/add-new-mailchimp-subscribers-from-new-ecwid-customers
   source: template
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: ecwid-log-newly-paid-orders-on-ecwid-as-offline-conversions-in-google-ads
@@ -155,276 +165,7 @@
   evidence: https://zapier.com/apps/ecwid/integrations/google-ads/543593/log-newly-paid-orders-on-ecwid-as-offline-conversions-in-google-ads
   template: https://zapier.com/apps/ecwid/integrations/google-ads/543593/log-newly-paid-orders-on-ecwid-as-offline-conversions-in-google-ads
   source: template
-  status: pending-generation
-  arazzo: null
-- slug: ecwid-quickbooks-online
-  label: QuickBooks Online
-  partner_name: QuickBooks Online
-  category: Accounting
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/quickbooks
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: ecwid-clickup
-  label: ClickUp
-  partner: clickup
-  partner_name: ClickUp
-  category: Project Management
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/clickup
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: ecwid-airtable
-  label: Airtable
-  partner: airtable
-  partner_name: Airtable
-  category: Databases
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/airtable
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: ecwid-activecampaign
-  label: ActiveCampaign
-  partner: activecampaign
-  partner_name: ActiveCampaign
-  category: Marketing Automation
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/activecampaign
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: ecwid-unisender
-  label: Unisender
-  partner_name: Unisender
-  category: Email Newsletters
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/unisender
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: ecwid-google-chat
-  label: Google Chat
-  partner: google-chat
-  partner_name: Google Chat
-  category: Google
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/google-chat
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: ecwid-monday-com
-  label: monday.com
-  partner_name: monday.com
-  category: Project Management
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/monday
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: ecwid-twilio
-  label: Twilio
-  partner: twilio
-  partner_name: Twilio
-  category: Phone & SMS
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/twilio
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: ecwid-woocommerce
-  label: WooCommerce
-  partner: woocommerce
-  partner_name: WooCommerce
-  category: eCommerce
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/woocommerce
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: ecwid-shipstation
-  label: ShipStation
-  partner: shipstation
-  partner_name: ShipStation
-  category: eCommerce
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/shipstation
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: ecwid-wave
-  label: Wave
-  partner: wave-financial
-  partner_name: Wave
-  category: Accounting
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/wave
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: ecwid-mailerlite
-  label: MailerLite
-  partner: mailerlite
-  partner_name: MailerLite
-  category: Marketing Automation
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/mailerlite
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: ecwid-aweber
-  label: AWeber
-  partner: aweber
-  partner_name: AWeber
-  category: Email Newsletters
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/aweber
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: ecwid-wix
-  label: Wix
-  partner: wix
-  partner_name: Wix
-  category: Website Builders
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/wix
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: ecwid-brevo
-  label: Brevo
-  partner: brevo
-  partner_name: Brevo
-  category: Email Newsletters
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/brevo
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: ecwid-trustpilot
-  label: Trustpilot
-  partner: trustpilot
-  partner_name: Trustpilot
-  category: Reviews
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/trustpilot
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: ecwid-microsoft-excel
-  label: Microsoft Excel
-  partner_name: Microsoft Excel
-  category: Microsoft
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/excel
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: ecwid-facebook-conversions-for-business-admins
-  label: Facebook Conversions (for Business admins)
-  partner_name: Facebook Conversions (for Business admins)
-  category: Ads & Conversion
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/facebook-conversions-business
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: ecwid-zoho-inventory
-  label: Zoho Inventory
-  partner: zoho-inventory
-  partner_name: Zoho Inventory
-  category: eCommerce
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/zoho-inventory
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: ecwid-google-calendar
-  label: Google Calendar
-  partner: google-calendar
-  partner_name: Google Calendar
-  category: Calendar
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/google-calendar
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: ecwid-thankster
-  label: Thankster
-  partner_name: Thankster
-  category: Customer Appreciation
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/thankster
-  source: edge
-  status: pending-partner-spec
-  arazzo: null
-- slug: ecwid-ebay
-  label: eBay
-  partner: ebay
-  partner_name: eBay
-  category: eCommerce
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/ebay
-  source: edge
-  status: pending-generation
-  arazzo: null
-- slug: ecwid-zoho-cliq
-  label: Zoho Cliq
-  partner: zoho-cliq
-  partner_name: Zoho Cliq
-  category: Website Builders
-  type: marketplace
-  marketplace: zapier
-  channel: ipaas-usage
-  evidence: https://zapier.com/apps/ecwid/integrations/zoho-cliq
-  source: edge
+  relationship: ipaas-bridge
   status: pending-generation
   arazzo: null
 - slug: ecwid-meltano
@@ -532,4 +273,300 @@
     sources: true
     builder: Pipedream repo (component)
   status: not-a-workflow
+  arazzo: null
+- slug: ecwid-quickbooks-online
+  label: QuickBooks Online
+  partner: quickbooks
+  partner_name: QuickBooks Online
+  category: Accounting
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/quickbooks
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: ecwid-clickup
+  label: ClickUp
+  partner: clickup
+  partner_name: ClickUp
+  category: Project Management
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/clickup
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: ecwid-airtable
+  label: Airtable
+  partner: airtable
+  partner_name: Airtable
+  category: Databases
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/airtable
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: ecwid-activecampaign
+  label: ActiveCampaign
+  partner: activecampaign
+  partner_name: ActiveCampaign
+  category: Marketing Automation
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/activecampaign
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: ecwid-unisender
+  label: Unisender
+  partner_name: Unisender
+  category: Email Newsletters
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/unisender
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: ecwid-google-chat
+  label: Google Chat
+  partner: google-chat
+  partner_name: Google Chat
+  category: Google
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/google-chat
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: ecwid-monday-com
+  label: monday.com
+  partner: monday-com
+  partner_name: monday.com
+  category: Project Management
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/monday
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: ecwid-twilio
+  label: Twilio
+  partner: twilio
+  partner_name: Twilio
+  category: Phone & SMS
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/twilio
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: ecwid-woocommerce
+  label: WooCommerce
+  partner: woocommerce
+  partner_name: WooCommerce
+  category: eCommerce
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/woocommerce
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: ecwid-shipstation
+  label: ShipStation
+  partner: shipstation
+  partner_name: ShipStation
+  category: eCommerce
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/shipstation
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: ecwid-wave
+  label: Wave
+  partner: wave-financial
+  partner_name: Wave
+  category: Accounting
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/wave
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: ecwid-mailerlite
+  label: MailerLite
+  partner: mailerlite
+  partner_name: MailerLite
+  category: Marketing Automation
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/mailerlite
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: ecwid-aweber
+  label: AWeber
+  partner: aweber
+  partner_name: AWeber
+  category: Email Newsletters
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/aweber
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: ecwid-wix
+  label: Wix
+  partner: wix
+  partner_name: Wix
+  category: Website Builders
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/wix
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: ecwid-brevo
+  label: Brevo
+  partner: brevo
+  partner_name: Brevo
+  category: Email Newsletters
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/brevo
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: ecwid-trustpilot
+  label: Trustpilot
+  partner: trustpilot
+  partner_name: Trustpilot
+  category: Reviews
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/trustpilot
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: ecwid-microsoft-excel
+  label: Microsoft Excel
+  partner_name: Microsoft Excel
+  category: Microsoft
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/excel
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: ecwid-facebook-conversions-for-business-admins
+  label: Facebook Conversions (for Business admins)
+  partner: facebook
+  partner_name: Facebook Conversions (for Business admins)
+  category: Ads & Conversion
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/facebook-conversions-business
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: ecwid-zoho-inventory
+  label: Zoho Inventory
+  partner: zoho-inventory
+  partner_name: Zoho Inventory
+  category: eCommerce
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/zoho-inventory
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: ecwid-google-calendar
+  label: Google Calendar
+  partner: google-calendar
+  partner_name: Google Calendar
+  category: Calendar
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/google-calendar
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: ecwid-thankster
+  label: Thankster
+  partner_name: Thankster
+  category: Customer Appreciation
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/thankster
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-partner-spec
+  arazzo: null
+- slug: ecwid-ebay
+  label: eBay
+  partner: ebay
+  partner_name: eBay
+  category: eCommerce
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/ebay
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
+  arazzo: null
+- slug: ecwid-zoho-cliq
+  label: Zoho Cliq
+  partner: zoho-cliq
+  partner_name: Zoho Cliq
+  category: Website Builders
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/ecwid/integrations/zoho-cliq
+  source: edge
+  relationship: ipaas-bridge
+  status: pending-generation
   arazzo: null
