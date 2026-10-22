@@ -14,6 +14,7 @@ checked:
 - https://zapier.com/api/v4/apps/
 - https://zapier.com/apps/ecwid/integrations
 - wordpress/integrations/wordpress-integration-edges.yml
+- wix/integrations/wix-integration-edges.yml
 summary: null
 marketplace_apps:
 - marketplace: zapier
@@ -108,41 +109,6 @@ edges:
     builder: 'community (Meltano Hub variant maintainers: hotgluexyz)'
   detected_by: sweep-data-integration.py
   first_seen: '2026-10-18'
-- partner_name: Clover (own)
-  partner: clover
-  partner_match: mirror
-  mirror_match: domain
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://www.clover.com/appmarket/apps/G5CYTR17H995T
-  mirror_of: clover/integrations/clover-integration-edges.yml
-  apps:
-  - Ecwid Connector
-  - Sell Online
-  listing_count: 2
-  detected: '2026-10-14'
-  detected_by: mirror-platform-listings.py
-  category: BAKERY
-- partner_name: WordPress (own)
-  partner: wordpress
-  partner_match: mirror
-  mirror_match: domain
-  type: marketplace
-  relationship: platform-app
-  direction: third-party
-  channel: partner-built
-  marketplace: own
-  evidence: https://wordpress.org/plugins/ecwid-shopping-cart/
-  mirror_of: wordpress/integrations/wordpress-integration-edges.yml
-  apps:
-  - Ecwid by Lightspeed Ecommerce Shopping Cart
-  listing_count: 1
-  detected: '2026-10-19'
-  detected_by: mirror-platform-listings.py
-  category: WordPress plugin
 - partner_name: Zapier
   partner: zapier
   partner_match: aggregator
@@ -554,6 +520,60 @@ edges:
   direction: third-party
   category: Website Builders
   partner_url: http://cliq.zoho.com/
+- partner_name: Clover (own)
+  partner: clover
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.clover.com/appmarket/apps/G5CYTR17H995T
+  mirror_of: clover/integrations/clover-integration-edges.yml
+  apps:
+  - Ecwid Connector
+  - Sell Online
+  listing_count: 2
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
+  category: BAKERY
+- partner_name: WordPress (own)
+  partner: wordpress
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://wordpress.org/plugins/ecwid-shopping-cart/
+  mirror_of: wordpress/integrations/wordpress-integration-edges.yml
+  apps:
+  - Ecwid by Lightspeed Ecommerce Shopping Cart
+  listing_count: 1
+  detected: '2026-10-19'
+  detected_by: mirror-platform-listings.py
+  category: WordPress plugin
+- partner_name: Wix (own)
+  partner: wix
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.wix.com/app-market/developer/ecwid-by-lightspeed
+  mirror_of: wix/integrations/wix-integration-edges.yml
+  apps:
+  - Online Store
+  listing_count: 1
+  detected: '2026-10-22'
+  detected_by: mirror-platform-listings.py
+  category: Stores
+  publisher_verified:
+  - Verified by Wix
 templates:
 - title: Save new Ecwid orders to Google Sheets rows
   url: https://zapier.com/apps/ecwid/integrations/google-sheets/6201/save-new-ecwid-orders-to-google-sheets-rows

@@ -197,32 +197,6 @@
     builder: 'community (Meltano Hub variant maintainers: hotgluexyz)'
   status: not-a-workflow
   arazzo: null
-- slug: ecwid-clover-own
-  label: Clover (own)
-  partner: clover
-  partner_name: Clover (own)
-  category: BAKERY
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://www.clover.com/appmarket/apps/G5CYTR17H995T
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
-- slug: ecwid-wordpress-own
-  label: WordPress (own)
-  partner: wordpress
-  partner_name: WordPress (own)
-  category: WordPress plugin
-  type: marketplace
-  marketplace: own
-  channel: partner-built
-  evidence: https://wordpress.org/plugins/ecwid-shopping-cart/
-  source: edge
-  relationship: platform-app
-  status: not-a-workflow
-  arazzo: null
 - slug: ecwid-zapier
   label: Zapier
   partner: zapier
@@ -569,4 +543,43 @@
   source: edge
   relationship: ipaas-bridge
   status: pending-generation
+  arazzo: null
+- slug: ecwid-clover-own
+  label: Clover (own)
+  partner: clover
+  partner_name: Clover (own)
+  category: BAKERY
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.clover.com/appmarket/apps/G5CYTR17H995T
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ecwid-wordpress-own
+  label: WordPress (own)
+  partner: wordpress
+  partner_name: WordPress (own)
+  category: WordPress plugin
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://wordpress.org/plugins/ecwid-shopping-cart/
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
+  arazzo: null
+- slug: ecwid-wix-own
+  label: Wix (own)
+  partner: wix
+  partner_name: Wix (own)
+  category: Stores
+  type: marketplace
+  marketplace: own
+  channel: partner-built
+  evidence: https://www.wix.com/app-market/developer/ecwid-by-lightspeed
+  source: edge
+  relationship: platform-app
+  status: not-a-workflow
   arazzo: null
