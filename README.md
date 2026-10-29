@@ -1,4 +1,4 @@
-# Ecwid by Lightspeed (ecwid)
+# Ecwid by Lightspeed
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,66 +66,119 @@
 
 Ecwid by Lightspeed is a multi-channel e-commerce platform that lets merchants launch a storefront and sell across websites, social media (Instagram, TikTok, Facebook, Pinterest, Snapchat), online marketplaces, and in-person via point-of-sale. The platform handles centralized inventory and order management, automated marketing, payments, shipping, tax, and domain management. The Ecwid REST API exposes products, categories, orders, customers, payment and shipping methods, and storefront settings using OAuth 2.0 authentication with public (read-only) or private access tokens.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/ecwid/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/ecwid/refs/heads/main/apis.yml)
+**Areas:** E-Commerce · Online Store · Storefront · Retail · Point-of-Sale · Multi-Channel Commerce
 
-## Scope
+## Ecwid by Lightspeed on APIs.io
 
-- **Type:** Index
+Everything profiled for Ecwid by Lightspeed is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/ecwid/](https://apis.io/providers/ecwid/)** — or go straight to one of the APIs or properties below.
 
-## Tags
+### APIs (7)
 
-- E-Commerce
-- Online Store
-- Storefront
-- Retail
-- Point of Sale
-- Multi-Channel Commerce
+- [Ecwid REST API](https://apis.io/apis/ecwid/rest-api/) — JSON REST API for managing Ecwid store data including products, categories, orders, customers, discount coupons, payment and shipping methods, application…
+- [Ecwid by Lightspeed Categories API](https://apis.io/apis/ecwid/ecwid-categories-api/) — The Categories API from Ecwid by Lightspeed — 2 operation(s) for categories.
+- [Ecwid by Lightspeed Customers API](https://apis.io/apis/ecwid/ecwid-customers-api/) — The Customers API from Ecwid by Lightspeed — 2 operation(s) for customers.
+- [Ecwid by Lightspeed Discount Coupons API](https://apis.io/apis/ecwid/ecwid-discount-coupons-api/) — The Discount Coupons API from Ecwid by Lightspeed — 1 operation(s) for discount coupons.
+- [Ecwid by Lightspeed Orders API](https://apis.io/apis/ecwid/ecwid-orders-api/) — The Orders API from Ecwid by Lightspeed — 2 operation(s) for orders.
+- [Ecwid by Lightspeed Products API](https://apis.io/apis/ecwid/ecwid-products-api/) — The Products API from Ecwid by Lightspeed — 2 operation(s) for products.
+- [Ecwid by Lightspeed Profile API](https://apis.io/apis/ecwid/ecwid-profile-api/) — The Profile API from Ecwid by Lightspeed — 1 operation(s) for profile.
 
-## Timestamps
+### Published properties
 
-- **Created:** 2026-05-11
-- **Modified:** 2026-05-11
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## APIs
+#### Agentic access (1)
 
-### Ecwid REST API
+Which operations an agent can call, which act, and which need a human in the loop.
 
-JSON REST API for managing Ecwid store data including products, categories, orders, customers, discount coupons, payment and shipping methods, application data, and storefront settings. Requests are made over HTTPS, authenticated via OAuth 2.0 access tokens (private for write access, public for read-only).
+- [Ecwid Agentic Access](https://apis.io/agentic-access/ecwid/ecwid-agentic-access/)
 
-- **Human URL:** [https://api-docs.ecwid.com/reference/overview](https://api-docs.ecwid.com/reference/overview)
-- **Base URL:** `https://app.ecwid.com/api/v3`
+#### Collections (7)
 
-#### Tags
+Postman and Open Collection request collections.
 
-- E-Commerce
-- Online Store
-- Storefront
-- Products
-- Orders
+- [Ecwid REST API](https://apis.io/collections/ecwid/open-ecwid/)
+- [Ecwid REST Categories API](https://apis.io/collections/ecwid/open-ecwid-categories-api/)
+- [Ecwid REST Categories Customers API](https://apis.io/collections/ecwid/open-ecwid-customers-api/)
+- [Ecwid REST Categories Discount Coupons API](https://apis.io/collections/ecwid/open-ecwid-discount-coupons-api/)
+- [Ecwid REST Categories Orders API](https://apis.io/collections/ecwid/open-ecwid-orders-api/)
+- [Ecwid REST Categories Products API](https://apis.io/collections/ecwid/open-ecwid-products-api/)
+- [Ecwid REST Categories Profile API](https://apis.io/collections/ecwid/open-ecwid-profile-api/)
 
-#### Properties
+#### Security (2)
 
-- [Documentation](https://api-docs.ecwid.com/reference/overview)
-- [Developer  Portal](https://developers.ecwid.com)
-- [Git Hub  Docs](https://github.com/Ecwid/ecwid-api-docs)
-- [O Auth  Token  Endpoint](https://my.ecwid.com/api/oauth/token)
-- [Getting Started](https://docs.ecwid.com/get-started/make-your-first-api-request)
-- [Postman Collection](collections/ecwid.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/ecwid.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+Authentication, trust centre, and vulnerability disclosure.
 
-## Common Properties
+- [Ecwid Authentication](https://apis.io/security/ecwid/ecwid-authentication/)
+- [Ecwid Domain Security](https://apis.io/security/ecwid/ecwid-domain-security/)
 
-- [LinkedIn](https://www.linkedin.com/company/ecwid)
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Ecwid Plans Pricing](https://apis.io/plans/ecwid/ecwid-plans-pricing/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.ecwid.com)
 - [Documentation](https://docs.ecwid.com)
-- [A P I  Documentation](https://api-docs.ecwid.com/reference/overview)
 - [Pricing](https://www.ecwid.com/pricing)
-- [Sign Up](https://my.ecwid.com/cp/?source=signup)
-- [Status Page](https://status.ecwid.com)
-- [GitHub Organization](https://github.com/Ecwid)
-- [L L Ms Txt](https://docs.ecwid.com/llms.txt)
+- [Blog](https://www.ecwid.com/blog/feed)
+- [GitHub](https://github.com/Ecwid)
+- [Status](https://status.ecwid.com)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 42.2** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 73.2 |
+| Contract quality | 48.7 |
+| Contract governance | 0.0 |
+| Operational transparency | 18.4 |
+| Developer ergonomics | 52.4 |
+| Access clarity | 55.3 |
+
+**Agent readiness 20.1** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+| Pagination Ratio | partial |
+| Operation Distinctiveness | distinct |
+
+**Regulatory alignment 11.8** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/ecwid/](https://apis.io/providers/ecwid/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Ecwid by Lightspeed: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/ecwid/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
